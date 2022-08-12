@@ -17,6 +17,9 @@ class ParamsContent:
     limit: int = 10
 
     def __str__(self):
+        if self.limit < 0 or self.limit > 100:
+            raise ValueError("Limit больше 100 или меньше 0")
+
         return {'ordering': self.ordering.value,
                 'direction': self.direction.value,
                 'field': self.field.value if self.field is not None else None,

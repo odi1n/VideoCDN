@@ -13,6 +13,9 @@ class ParamsSeason:
     limit: int = 10
 
     def __str__(self):
+        if self.limit < 0 or self.limit > 100:
+            raise ValueError("Limit больше 100 или меньше 0")
+
         return {'tv_series_id': self.tv_series_id,
                 'ordering': self.ordering.value,
                 'direction': self.direction.value,
