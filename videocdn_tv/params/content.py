@@ -1,8 +1,8 @@
 from dataclasses import dataclass
 
-from type.direction import Direction
-from type.field import Field
-from type.ordering import Ordering
+from videocdn_tv.type.direction import Direction
+from videocdn_tv.type.field import Field
+from videocdn_tv.type.ordering import Ordering
 
 
 @dataclass

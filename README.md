@@ -2,7 +2,7 @@
 
 Реализация Api для сервиса VideoCDN.tv
 
-Установка:```pip install videocdn```
+Установка:```pip install videocdn-tv```
 
 ## Методы
 

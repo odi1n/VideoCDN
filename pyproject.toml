@@ -1,13 +1,16 @@
 [tool.poetry]
-name = "videocdn"
-version = "0.1.0"
-description = ""
+name = "videocdn_tv"
+version = "0.1.2"
+description = "Реализация Api для сервиса VideoCDN.tv"
 authors = ["Your Name <you@example.com>"]
+repository = 'https://github.com/odi1n/VideoCDN'
+readme = 'README.md'
+keywords = ['text']
 
 [tool.poetry.dependencies]
 python = "^3.9"
 pydantic = "^1.9.2"
-requests = "^2.28.1"
+requests = "2.26.0"
 
 [tool.poetry.dev-dependencies]
 

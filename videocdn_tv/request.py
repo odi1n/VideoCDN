@@ -4,8 +4,8 @@ from typing import Tuple, Union
 import requests
 from requests import Response
 
-from models.content import ContentModel
-from params import *
+from videocdn_tv.models.content import ContentModel
+from videocdn_tv.params import *
 
 
 def get_request(self,

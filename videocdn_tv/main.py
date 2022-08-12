@@ -4,12 +4,12 @@ from typing import Tuple
 import requests
 from requests import Response
 
-from link import *
-from models.content import ContentModel
-from models.translation import TranslationModel
+from videocdn_tv.link import *
+from videocdn_tv.models.content import ContentModel
+from videocdn_tv.models.translation import TranslationModel
 
-from params import *
-from request import get_request
+from videocdn_tv.params import *
+from videocdn_tv.request import get_request
 
 
 class VideoCDN:
