@@ -41,7 +41,7 @@ class Media(BaseModel):
     qualities: List[Qualities]
 
 
-class Datum(BaseModel):
+class Movies(BaseModel):
     id: int
     ru_title: str
     orig_title: str
@@ -54,22 +54,10 @@ class Datum(BaseModel):
     blocked: int
     media: List[Media]
 
-    season_count: int = None
-    episode_count: int = None
-    last_episode_id: int = None
-    start_date: str = None
-    end_date: str = None
-    preview_iframe_src: str
-    iframe_src: str
-    iframe: str
-    year: str
-    content_type: str
-    translations: List[Translations]
 
-
-class ContentModel(BaseModel):
+class Content(BaseModel):
     result: bool
-    data: List[Datum]
+    data_movies: List[Movies]
     current_page: int
     first_page_url: str
     from_: int = 0
