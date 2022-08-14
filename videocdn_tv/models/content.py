@@ -4,7 +4,7 @@ from typing import List
 
 from pydantic import BaseModel
 
-from videocdn_tv.models.api import Movie, Anime, TvSeries, AnimeTvSeries
+from videocdn_tv.models.api import Movie, Anime, TvSeries, AnimeTvSeries, ShowTvSeries
 
 
 class ContentBase(BaseModel):
