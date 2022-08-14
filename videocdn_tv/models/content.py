@@ -16,22 +16,49 @@ class Translations(BaseModel):
     shorter_title: str
 
 
+class Qualities(BaseModel):
+    id: int
+    url: str
+    resolution: int
+    media_id: int
+
+
+class Media(BaseModel):
+    id: int
+    translation_id: int
+    content_id: int
+    content_type: str
+    tv_series_id: str = None
+    source_quality: str
+    max_quality: int
+    path: str
+    duration: int
+    created: str
+    accepted: str
+    deleted_at: str = None
+    blocked: int
+    count_download: int
+    qualities: List[Qualities]
+
+
 class Datum(BaseModel):
     id: int
     ru_title: str
     orig_title: str
     imdb_id: str = None
     kinopoisk_id: int
-    season_count: int = None
-    episode_count: int = None
-    last_episode_id: int = None
     default_media_id: Any
-    start_date: str = None
-    end_date: str = None
     created: str
     released: str
     updated: str
     blocked: int
+    media: List[Media]
+
+    season_count: int = None
+    episode_count: int = None
+    last_episode_id: int = None
+    start_date: str = None
+    end_date: str = None
     preview_iframe_src: str
     iframe_src: str
     iframe: str
