@@ -21,7 +21,7 @@ class Datum(BaseModel):
     ru_title: str
     orig_title: str
     imdb_id: str = None
-    kinopoisk_id: str
+    kinopoisk_id: int
     season_count: int = None
     episode_count: int = None
     last_episode_id: int = None
