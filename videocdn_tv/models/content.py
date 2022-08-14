@@ -5,6 +5,7 @@ from typing import List
 from pydantic import BaseModel
 
 from videocdn_tv.models.api import Movie, Anime, TvSeries, AnimeTvSeries, ShowTvSeries
+from videocdn_tv.models.seasons import ShowTvSeriesSeason, AnimeTVSeriesSeason, TvSeriesSeason
 
 
 class ContentBase(BaseModel):
@@ -35,8 +36,21 @@ class TvSeriesContent(ContentBase):
     data: List[TvSeries]
 
 
+class TvSeriesSeasonsContent(ContentBase):
+    data: List[TvSeriesSeason]
+
+
 class AnimeTvSeriesContent(ContentBase):
     data: List[AnimeTvSeries]
 
+
+class AnimeTvSeriesSeasonsContent(ContentBase):
+    data: List[AnimeTVSeriesSeason]
+
+
 class ShowTvSeriesContent(ContentBase):
     data: List[ShowTvSeries]
+
+
+class ShowTvSeriesSeasonsContent(ContentBase):
+    data: List[ShowTvSeriesSeason]

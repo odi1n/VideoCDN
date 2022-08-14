@@ -1,10 +1,7 @@
 from videocdn_tv.link import *
 from videocdn_tv.models.content import (
-    MovieContent,
-    AnimeContent,
-    TvSeriesContent,
-    AnimeTvSeriesContent,
-    ShowTvSeriesContent
+    MovieContent, AnimeContent, TvSeriesContent, AnimeTvSeriesContent, ShowTvSeriesContent,
+    ShowTvSeriesSeasonsContent, AnimeTvSeriesSeasonsContent, TvSeriesSeasonsContent
 )
 from videocdn_tv.models.translation import TranslationModel
 
@@ -28,8 +25,8 @@ class VideoCDN:
     def get_tv_series(self, params: ParamsContent) -> TvSeriesContent:
         return TvSeriesContent(**get_request(self, TV_SERIES, params))
 
-    def get_tv_series_seasons(self, params: ParamsSeason) -> Content:
-        return Content(**get_request(self, TV_SERIES_SEASONS, params))
+    def get_tv_series_seasons(self, params: ParamsSeason) -> TvSeriesSeasonsContent:
+        return TvSeriesSeasonsContent(**get_request(self, TV_SERIES_SEASONS, params))
 
     def get_tv_series_episodes(self, params: ParamsEpisode) -> Content:
         return Content(**get_request(self, TV_SERIES_EPISODES, params))
@@ -37,8 +34,8 @@ class VideoCDN:
     def get_anime_tv_series(self, params: ParamsContent) -> AnimeTvSeriesContent:
         return AnimeTvSeriesContent(**get_request(self, ANIME_TV_SERIES, params))
 
-    def get_anime_tv_series_seasons(self, params: ParamsSeason) -> Content:
-        return Content(**get_request(self, ANIME_TV_SERIES_SEASONS, params))
+    def get_anime_tv_series_seasons(self, params: ParamsSeason) -> AnimeTvSeriesSeasonsContent:
+        return AnimeTvSeriesSeasonsContent(**get_request(self, ANIME_TV_SERIES_SEASONS, params))
 
     def get_anime_tv_series_episodes(self, params: ParamsEpisode) -> Content:
         return Content(**get_request(self, ANIME_TV_SERIES_EPISODES, params))
@@ -46,8 +43,8 @@ class VideoCDN:
     def get_show_tv_series(self, params: ParamsContent) -> ShowTvSeriesContent:
         return ShowTvSeriesContent(**get_request(self, SHOW_TV_SERIES, params))
 
-    def get_show_tv_series_season(self, params: ParamsSeason) -> Content:
-        return Content(**get_request(self, SHOW_TV_SERIES_SEASONS, params))
+    def get_show_tv_series_season(self, params: ParamsSeason) -> ShowTvSeriesSeasonsContent:
+        return ShowTvSeriesSeasonsContent(**get_request(self, SHOW_TV_SERIES_SEASONS, params))
 
     def get_show_tv_series_episodes(self, params: ParamsEpisode) -> Content:
         return Content(**get_request(self, SHOW_TV_SERIES_EPISODES, params))
