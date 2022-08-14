@@ -9,12 +9,12 @@ class Anime(BaseModel):
     id: int
     ru_title: str
     orig_title: str
-    en_title: str
-    other_title: str
+    en_title: str = None
+    other_title: str = None
     imdb_id: str
     kinopoisk_id: str
     default_media_id: str = None
-    worldart_id: str
+    worldart_id: str = None
     created: str
     released: str
     updated: str
@@ -23,6 +23,6 @@ class Anime(BaseModel):
     preview_iframe_src: str
     iframe_src: str
     iframe: str
-    translation: List[Translation]
+    translation: List[Translation] = None
     year: str
     content_type: str

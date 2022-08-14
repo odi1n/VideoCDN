@@ -5,7 +5,8 @@ from typing import List
 from pydantic import BaseModel
 
 from videocdn_tv.models.api import Movie, Anime, TvSeries, AnimeTvSeries, ShowTvSeries
-from videocdn_tv.models.seasons import ShowTvSeriesSeason, AnimeTVSeriesSeason, TvSeriesSeason
+from videocdn_tv.models.episodes import ShowTvSeriesEpisode, AnimeTvSeriesEpisode, TvSeriesEpisode
+from videocdn_tv.models.seasons import ShowTvSeriesSeason, AnimeTvSeriesSeason, TvSeriesSeason
 
 
 class ContentBase(BaseModel):
@@ -15,13 +16,13 @@ class ContentBase(BaseModel):
     from_: int = 0
     last_page: int
     last_page_url: str
-    next_page_url: str
+    next_page_url: str = None
     path: str
     per_page: int
     prev_page_url: str = None
-    to: int
-    total: int
-    total_count: int
+    to: int = None
+    total: int = None
+    total_count: int = None
 
 
 class MovieContent(ContentBase):
@@ -40,12 +41,20 @@ class TvSeriesSeasonsContent(ContentBase):
     data: List[TvSeriesSeason]
 
 
+class TvSeriesEpisodesContent(ContentBase):
+    data: List[TvSeriesEpisode]
+
+
 class AnimeTvSeriesContent(ContentBase):
     data: List[AnimeTvSeries]
 
 
 class AnimeTvSeriesSeasonsContent(ContentBase):
-    data: List[AnimeTVSeriesSeason]
+    data: List[AnimeTvSeriesSeason]
+
+
+class AnimeTvSeriesEpisodesContent(ContentBase):
+    data: List[AnimeTvSeriesEpisode]
 
 
 class ShowTvSeriesContent(ContentBase):
@@ -54,3 +63,7 @@ class ShowTvSeriesContent(ContentBase):
 
 class ShowTvSeriesSeasonsContent(ContentBase):
     data: List[ShowTvSeriesSeason]
+
+
+class ShowTvSeriesEpisodesContent(ContentBase):
+    data: List[ShowTvSeriesEpisode]

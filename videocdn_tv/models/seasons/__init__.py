@@ -22,9 +22,9 @@ class TvSeriesSeason(Season):
     pass
 
 
-class AnimeTVSeriesSeason(Season):
+class AnimeTvSeriesSeason(Season):
     en_title: str
-    other_title: str
+    other_title: str = None
 
 
 class ShowTvSeriesSeason(Season):

@@ -2,7 +2,7 @@ from typing import List
 
 from pydantic import BaseModel
 
-from videocdn_tv.models.contents.qualities import Qualitie
+from videocdn_tv.models.contents.qualitie import Qualitie
 
 
 class Media(BaseModel):
@@ -20,4 +20,4 @@ class Media(BaseModel):
     deleted_at: str = None
     blocked: int
     count_download: int
-    qualities: List[Qualitie]
+    qualities: List[Qualitie] = None
