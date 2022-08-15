@@ -20,6 +20,6 @@ class Movie(BaseModel):
     preview_iframe_src: str
     iframe_src: str
     iframe: str
-    translation: List[Translation]
+    translations: List[Translation]
     year: str
     content_type: str
