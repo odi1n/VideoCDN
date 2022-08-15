@@ -23,6 +23,6 @@ class Anime(BaseModel):
     preview_iframe_src: str
     iframe_src: str
     iframe: str
-    translation: List[Translation] = None
+    translations: List[Translation] = None
     year: str
     content_type: str
