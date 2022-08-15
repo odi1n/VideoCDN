@@ -14,7 +14,7 @@ class Movie(BaseModel):
     default_media_id: str = None
     created: str
     released: str
-    updated: str
+    updated: str = None
     blocked: int
     media: List[Media]
     preview_iframe_src: str
