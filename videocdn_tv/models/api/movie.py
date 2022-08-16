@@ -10,7 +10,7 @@ class Movie(BaseModel):
     ru_title: str
     orig_title: str
     imdb_id: str = None
-    kinopoisk_id: int
+    kinopoisk_id: int = None
     default_media_id: str = None
     created: str
     released: str
