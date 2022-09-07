@@ -16,7 +16,7 @@ class Media(BaseModel):
     path: str
     duration: int
     created: str
-    accepted: str
+    accepted: str = None
     deleted_at: str = None
     blocked: int
     count_download: int
