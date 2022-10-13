@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -11,8 +12,8 @@ class BaseApi(BaseModel):
     orig_title: str
     imdb_id: str = None
     kinopoisk_id: int = None
-    created: str
-    updated: str = None
+    created: datetime
+    updated: datetime = None
     blocked: int
     preview_iframe_src: str
     iframe_src: str

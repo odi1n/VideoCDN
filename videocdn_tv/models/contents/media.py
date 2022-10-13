@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -15,7 +16,7 @@ class Media(BaseModel):
     max_quality: int
     path: str
     duration: int
-    created: str
+    created: datetime
     accepted: str = None
     deleted_at: str = None
     blocked: int

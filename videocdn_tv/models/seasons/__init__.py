@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -12,9 +13,9 @@ class Season(BaseModel):
     ru_title: str
     orig_title: str
     episode_count: int
-    start_date: str
-    end_date: str
-    created: str
+    start_date: datetime
+    end_date: datetime
+    created: datetime
     episodes: List[Episode]
 
 

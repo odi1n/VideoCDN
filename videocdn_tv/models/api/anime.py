@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 from videocdn_tv.models.api.base_api import BaseApi
@@ -9,7 +10,7 @@ class Anime(BaseApi):
     other_title: str = None
     default_media_id: str = None
     worldart_id: str = None
-    released: str
+    released: datetime
     media: List[Media]
     year: str
     content_type: str
