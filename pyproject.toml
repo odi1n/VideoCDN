@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "videocdn_tv"
-version = "0.1.9"
+version = "0.1.10"
 description = "Реализация Api для сервиса VideoCDN.tv"
 authors = ["Your Name <you@example.com>"]
 license = "MIT"

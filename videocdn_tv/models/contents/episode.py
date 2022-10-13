@@ -1,3 +1,4 @@
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -15,7 +16,7 @@ class Episode(BaseModel):
     orig_title: str
     imdb_id: str = None
     kinopoisk_id: str = None
-    released: str
-    ru_released: str = None
-    created: str
+    released: datetime
+    ru_released: datetime = None
+    created: datetime
     media: List[Media]

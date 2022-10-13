@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+from datetime import datetime
 from typing import List
 
 from pydantic import BaseModel
@@ -17,9 +17,9 @@ class Episode(BaseModel):
     orig_title: str
     imdb_id: str = None
     kinopoisk_id: str
-    released: str
-    ru_released: str
-    created: str
+    released: datetime
+    ru_released: datetime
+    created: datetime
     media: List[Media]
 
 
