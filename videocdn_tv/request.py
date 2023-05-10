@@ -2,7 +2,7 @@ import json
 from json import JSONDecodeError
 from typing import Any, Optional, Union
 
-import requests
+import httpx
 
 from videocdn_tv.exception import ApiFailedError, ApiTokenInvalidError
 from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
@@ -19,7 +19,7 @@ def get_request(
     else:
         params = self.params
 
-    response = requests.get(link, params=params, timeout=90)
+    response = httpx.get(link, params=params, timeout=90)
 
     if response.status_code == 200:
         try:

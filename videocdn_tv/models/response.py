@@ -2,7 +2,14 @@ from __future__ import annotations
 
 from pydantic import BaseModel
 
-from videocdn_tv.models.api import Anime, AnimeTvSeries, Movie, ShowTvSeries, TvSeries, Translations
+from videocdn_tv.models.api import (
+    Anime,
+    AnimeTvSeries,
+    Movie,
+    ShowTvSeries,
+    Translations,
+    TvSeries,
+)
 from videocdn_tv.models.base import ContentBase
 from videocdn_tv.models.episodes import (
     AnimeTvSeriesEpisode,
@@ -14,6 +21,7 @@ from videocdn_tv.models.seasons import (
     ShowTvSeriesSeason,
     TvSeriesSeason,
 )
+
 
 class TranslationModel(BaseModel):
     result: bool

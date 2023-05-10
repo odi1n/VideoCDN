@@ -20,12 +20,11 @@ from videocdn_tv.models.response import (
     ShowTvSeriesContent,
     ShowTvSeriesEpisodesContent,
     ShowTvSeriesSeasonsContent,
+    TranslationModel,
     TvSeriesContent,
     TvSeriesEpisodesContent,
     TvSeriesSeasonsContent,
-    TranslationModel
 )
-
 from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
 from videocdn_tv.request import get_request
 

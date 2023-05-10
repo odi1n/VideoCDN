@@ -12,7 +12,7 @@ keywords = ['videocdn', 'videocdn-tv']
 [tool.poetry.dependencies]
 python = "^3.9"
 pydantic = "^1.9.2"
-requests = "2.26.0"
+httpx = "^0.24.0"
 
 [tool.poetry.dev-dependencies]
 
