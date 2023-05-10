@@ -7,8 +7,8 @@ from videocdn_tv.type.field import Field
 
 @dataclass
 class ParamsContent(BaseParams):
-    field: Optional[Field] = None
     query: Optional[str] = None
+    field: Optional[Field] = None
     translation: Optional[int] = None
     year: Optional[int] = None
 

@@ -1,9 +1,10 @@
+from dataclasses import dataclass
 from typing import Optional
 
 from videocdn_tv.type.direction import Direction
 from videocdn_tv.type.ordering import Ordering
 
-
+@dataclass
 class BaseParams:
     ordering: Ordering = Ordering.ID
     direction: Direction = Direction.ASC
