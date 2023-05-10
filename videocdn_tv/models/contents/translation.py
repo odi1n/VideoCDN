@@ -13,6 +13,6 @@ class Translation(BaseModel):
     smart_title: str
     shorter_title: str
 
-    episodes_count: int = None
-    source_quality: str = None
-    max_quality: int = None
+    episodes_count: int | None = None
+    source_quality: str | None = None
+    max_quality: int | None = None

@@ -1,12 +1,18 @@
 from __future__ import annotations
 
-from typing import List
-
 from pydantic import BaseModel
 
-from videocdn_tv.models.api import Movie, Anime, TvSeries, AnimeTvSeries, ShowTvSeries
-from videocdn_tv.models.episodes import ShowTvSeriesEpisode, AnimeTvSeriesEpisode, TvSeriesEpisode
-from videocdn_tv.models.seasons import ShowTvSeriesSeason, AnimeTvSeriesSeason, TvSeriesSeason
+from videocdn_tv.models.api import Anime, AnimeTvSeries, Movie, ShowTvSeries, TvSeries
+from videocdn_tv.models.episodes import (
+    AnimeTvSeriesEpisode,
+    ShowTvSeriesEpisode,
+    TvSeriesEpisode,
+)
+from videocdn_tv.models.seasons import (
+    AnimeTvSeriesSeason,
+    ShowTvSeriesSeason,
+    TvSeriesSeason,
+)
 
 
 class ContentBase(BaseModel):
@@ -16,54 +22,54 @@ class ContentBase(BaseModel):
     from_: int = 0
     last_page: int
     last_page_url: str
-    next_page_url: str = None
+    next_page_url: str | None = None
     path: str
     per_page: int
-    prev_page_url: str = None
-    to: int = None
-    total: int = None
-    total_count: int = None
+    prev_page_url: str | None = None
+    to: int | None = None
+    total: int | None = None
+    total_count: int | None = None
 
 
 class MovieContent(ContentBase):
-    data: List[Movie]
+    data: list[Movie]
 
 
 class AnimeContent(ContentBase):
-    data: List[Anime]
+    data: list[Anime]
 
 
 class TvSeriesContent(ContentBase):
-    data: List[TvSeries]
+    data: list[TvSeries]
 
 
 class TvSeriesSeasonsContent(ContentBase):
-    data: List[TvSeriesSeason]
+    data: list[TvSeriesSeason]
 
 
 class TvSeriesEpisodesContent(ContentBase):
-    data: List[TvSeriesEpisode]
+    data: list[TvSeriesEpisode]
 
 
 class AnimeTvSeriesContent(ContentBase):
-    data: List[AnimeTvSeries]
+    data: list[AnimeTvSeries]
 
 
 class AnimeTvSeriesSeasonsContent(ContentBase):
-    data: List[AnimeTvSeriesSeason]
+    data: list[AnimeTvSeriesSeason]
 
 
 class AnimeTvSeriesEpisodesContent(ContentBase):
-    data: List[AnimeTvSeriesEpisode]
+    data: list[AnimeTvSeriesEpisode]
 
 
 class ShowTvSeriesContent(ContentBase):
-    data: List[ShowTvSeries]
+    data: list[ShowTvSeries]
 
 
 class ShowTvSeriesSeasonsContent(ContentBase):
-    data: List[ShowTvSeriesSeason]
+    data: list[ShowTvSeriesSeason]
 
 
 class ShowTvSeriesEpisodesContent(ContentBase):
-    data: List[ShowTvSeriesEpisode]
+    data: list[ShowTvSeriesEpisode]

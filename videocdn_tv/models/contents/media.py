@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -11,14 +11,14 @@ class Media(BaseModel):
     translation_id: int
     content_id: int
     content_type: str
-    tv_series_id: str = None
+    tv_series_id: Optional[str] = None
     source_quality: str
     max_quality: int
     path: str
     duration: int
     created: datetime
-    accepted: str = None
-    deleted_at: str = None
+    accepted: Optional[str] = None
+    deleted_at: Optional[str] = None
     blocked: int
     count_download: int
-    qualities: List[Qualitie] = None
+    qualities: Optional[List[Qualitie]] = None

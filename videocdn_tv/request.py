@@ -1,16 +1,18 @@
 import json
 from json import JSONDecodeError
-from typing import Union, Any
+from typing import Any, Optional, Union
 
 import requests
 
 from videocdn_tv.exception import ApiFailedException, ApiTokenInvalid
-from videocdn_tv.params import *
+from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
 
 
-def get_request(self,
-                link: str,
-                params: Union[ParamsContent, ParamsSeason, ParamsEpisode] = None) -> Any:
+def get_request(
+    self,
+    link: str,
+    params: Optional[Union[ParamsContent, ParamsSeason, ParamsEpisode]] = None,
+) -> Any:
     if params is not None:
         params = {**self.params, **params.__str__()}
     else:

@@ -1,4 +1,4 @@
-from .episode import Episode
-from .media import Media
-from .qualitie import Qualitie
-from .translation import Translation
+from .episode import Episode  # noqa
+from .media import Media  # noqa
+from .qualitie import Qualitie  # noqa
+from .translation import Translation  # noqa

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List
+from typing import List, Optional
 
 from pydantic import BaseModel
 
@@ -25,7 +25,7 @@ class TvSeriesSeason(Season):
 
 class AnimeTvSeriesSeason(Season):
     en_title: str
-    other_title: str = None
+    other_title: Optional[str] = None
 
 
 class ShowTvSeriesSeason(Season):
