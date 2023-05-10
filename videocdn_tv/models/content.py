@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 from pydantic import BaseModel
 
 from videocdn_tv.models.api import Anime, AnimeTvSeries, Movie, ShowTvSeries, TvSeries
@@ -22,13 +24,13 @@ class ContentBase(BaseModel):
     from_: int = 0
     last_page: int
     last_page_url: str
-    next_page_url: str | None = None
+    next_page_url: Optional[str] = None
     path: str
     per_page: int
-    prev_page_url: str | None = None
-    to: int | None = None
-    total: int | None = None
-    total_count: int | None = None
+    prev_page_url: Optional[str] = None
+    to: Optional[int] = None
+    total: Optional[int] = None
+    total_count: Optional[int] = None
 
 
 class MovieContent(ContentBase):

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -19,4 +19,4 @@ class Episode(BaseModel):
     released: datetime
     ru_released: Optional[datetime] = None
     created: datetime
-    media: List[Media]
+    media: list[Media]

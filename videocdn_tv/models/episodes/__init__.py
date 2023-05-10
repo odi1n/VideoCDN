@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from datetime import datetime
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -15,7 +16,7 @@ class Episode(BaseModel):
     season_num: int
     ru_title: str
     orig_title: str
-    imdb_id: str | None = None
+    imdb_id: Optional[str] = None
     kinopoisk_id: str
     released: datetime
     ru_released: datetime
@@ -29,7 +30,7 @@ class TvSeriesEpisode(Episode):
 
 class AnimeTvSeriesEpisode(Episode):
     en_title: str
-    other_title: str | None = None
+    other_title: Optional[str] = None
 
 
 class ShowTvSeriesEpisode(Episode):

@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -16,7 +16,7 @@ class Season(BaseModel):
     start_date: datetime
     end_date: datetime
     created: datetime
-    episodes: List[Episode]
+    episodes: list[Episode]
 
 
 class TvSeriesSeason(Season):

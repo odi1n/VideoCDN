@@ -4,28 +4,30 @@ from typing import Any, Optional, Union
 
 import requests
 
-from videocdn_tv.exception import ApiFailedException, ApiTokenInvalid
+from videocdn_tv import VideoCDN
+from videocdn_tv.exception import ApiFailedError, ApiTokenInvalidError
 from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
 
 
 def get_request(
-    self,
+    self: VideoCDN,
     link: str,
     params: Optional[Union[ParamsContent, ParamsSeason, ParamsEpisode]] = None,
 ) -> Any:
     if params is not None:
-        params = {**self.params, **params.__str__()}
+        params.validate()
+        params = {**self.params, **params.as_dict()}
     else:
         params = self.params
 
-    response = requests.get(link, params=params)
+    response = requests.get(link, params=params, timeout=90)
 
     if response.status_code == 200:
         try:
             return json.loads(response.text)
-        except JSONDecodeError:
-            raise ApiTokenInvalid
+        except JSONDecodeError as error:
+            raise ApiTokenInvalidError(error) from error
     elif response.status_code == 500:
-        raise ApiFailedException(response.status_code, response.text)
+        raise ApiFailedError(response.status_code, response.text)
     else:
         raise Exception(response.status_code, response.text)

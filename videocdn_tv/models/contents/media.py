@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -21,4 +21,4 @@ class Media(BaseModel):
     deleted_at: Optional[str] = None
     blocked: int
     count_download: int
-    qualities: Optional[List[Qualitie]] = None
+    qualities: Optional[list[Qualitie]] = None

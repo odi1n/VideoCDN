@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import Optional
 
 from videocdn_tv.models.api.base_api import BaseApi
 from videocdn_tv.models.contents import Episode
@@ -11,4 +11,4 @@ class ShowTvSeries(BaseApi):
     last_episode_id: int
     start_date: datetime
     end_date: Optional[datetime] = None
-    episodes: List[Episode]
+    episodes: list[Episode]

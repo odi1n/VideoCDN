@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -13,6 +15,6 @@ class Translation(BaseModel):
     smart_title: str
     shorter_title: str
 
-    episodes_count: int | None = None
-    source_quality: str | None = None
-    max_quality: int | None = None
+    episodes_count: Optional[int] = None
+    source_quality: Optional[str] = None
+    max_quality: Optional[int] = None

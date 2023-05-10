@@ -1,4 +1,17 @@
-from videocdn_tv.link import *
+from videocdn_tv import ParamsContent, ParamsEpisode, ParamsSeason
+from videocdn_tv.link import (
+    ANIME_TV_SERIES,
+    ANIME_TV_SERIES_EPISODES,
+    ANIME_TV_SERIES_SEASONS,
+    MOVIES,
+    SHOW_TV_SERIES,
+    SHOW_TV_SERIES_EPISODES,
+    SHOW_TV_SERIES_SEASONS,
+    TRANSLATIONS,
+    TV_SERIES,
+    TV_SERIES_EPISODES,
+    TV_SERIES_SEASONS,
+)
 from videocdn_tv.models.content import (
     AnimeContent,
     AnimeTvSeriesContent,
@@ -13,7 +26,6 @@ from videocdn_tv.models.content import (
     TvSeriesSeasonsContent,
 )
 from videocdn_tv.models.translation import TranslationModel
-from videocdn_tv.params import *
 from videocdn_tv.request import get_request
 
 
@@ -87,7 +99,7 @@ class VideoCDN:
         params: ParamsSeason,
     ) -> ShowTvSeriesSeasonsContent:
         return ShowTvSeriesSeasonsContent(
-            **get_request(self, SHOW_TV_SERIES_SEASONS, params)
+            **get_request(self, SHOW_TV_SERIES_SEASONS, params),
         )
 
     def get_show_tv_series_episodes(
