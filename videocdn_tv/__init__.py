@@ -1,2 +1,2 @@
-from .params import *
-from .main import VideoCDN
+from .main import VideoCDN  # noqa
+from .params import ParamsContent, ParamsEpisode, ParamsSeason  # noqa

@@ -1,7 +1,7 @@
 import enum
 
 
-class Ordering(enum.Enum):
+class Ordering(str, enum.Enum):
     ID = "id"
     CREATED = "created"
     RELEASED = "released"

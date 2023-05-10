@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List
+from typing import Optional
 
 from pydantic import BaseModel
 
@@ -10,12 +10,12 @@ class BaseApi(BaseModel):
     id: int
     ru_title: str
     orig_title: str
-    imdb_id: str = None
-    kinopoisk_id: int = None
+    imdb_id: Optional[str] = None
+    kinopoisk_id: Optional[int] = None
     created: datetime
-    updated: datetime = None
-    blocked: int
-    preview_iframe_src: str
+    updated: Optional[datetime] = None
+    blocked: Optional[bool]
+    preview_iframe_src: Optional[str]
     iframe_src: str
-    iframe: str
-    translations: List[Translation] = None
+    iframe: Optional[str]
+    translations: Optional[list[Translation]] = None

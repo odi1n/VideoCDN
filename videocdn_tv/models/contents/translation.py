@@ -1,18 +1,20 @@
 from __future__ import annotations
 
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class Translation(BaseModel):
     id: int
-    title: str
-    priority: int
+    title: Optional[str]
+    priority: Optional[int]
     iframe_src: str
-    iframe: str
-    short_title: str
-    smart_title: str
-    shorter_title: str
+    iframe: Optional[str]
+    short_title: Optional[str]
+    smart_title: Optional[str]
+    shorter_title: Optional[str]
 
-    episodes_count: int = None
-    source_quality: str = None
-    max_quality: int = None
+    episodes_count: Optional[int]
+    source_quality: Optional[str]
+    max_quality: Optional[int]

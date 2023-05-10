@@ -1,16 +1,16 @@
 from datetime import datetime
-from typing import List
+from typing import Optional
 
 from videocdn_tv.models.api.base_api import BaseApi
 from videocdn_tv.models.contents import Media
 
 
 class Anime(BaseApi):
-    en_title: str = None
-    other_title: str = None
-    default_media_id: str = None
-    worldart_id: str = None
-    released: datetime
-    media: List[Media]
+    en_title: Optional[str]
+    other_title: Optional[str]
+    default_media_id: Optional[str]
+    worldart_id: Optional[str]
+    released: Optional[datetime]
+    media: list[Media]
     year: str
     content_type: str

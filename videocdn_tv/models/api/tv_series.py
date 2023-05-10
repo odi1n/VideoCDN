@@ -1,14 +1,14 @@
 from datetime import datetime
-from typing import List
+from typing import Optional
 
 from videocdn_tv.models.api.base_api import BaseApi
 from videocdn_tv.models.contents import Episode
 
 
 class TvSeries(BaseApi):
-    season_count: int
-    episode_count: int
-    last_episode_id: int = None
-    start_date: datetime
-    end_date: datetime = None
-    episodes: List[Episode]
+    season_count: Optional[int]
+    episode_count: Optional[int]
+    last_episode_id: Optional[int]
+    start_date: Optional[datetime]
+    end_date: Optional[datetime]
+    episodes: list[Episode]
