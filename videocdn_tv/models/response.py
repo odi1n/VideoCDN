@@ -15,7 +15,6 @@ from videocdn_tv.models.seasons import (
     TvSeriesSeason,
 )
 
-
 class TranslationModel(BaseModel):
     result: bool
     data: list[Translations]

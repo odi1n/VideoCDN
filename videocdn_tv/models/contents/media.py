@@ -11,14 +11,14 @@ class Media(BaseModel):
     translation_id: int
     content_id: int
     content_type: str
-    tv_series_id: Optional[str] = None
+    tv_series_id: Optional[str]
     source_quality: str
     max_quality: int
     path: str
     duration: int
-    created: datetime
-    accepted: Optional[str] = None
-    deleted_at: Optional[str] = None
-    blocked: int
-    count_download: int
-    qualities: Optional[list[Qualitie]] = None
+    created: Optional[datetime]
+    accepted: Optional[str]
+    deleted_at: Optional[str]
+    blocked: Optional[bool]
+    count_download: Optional[int]
+    qualities: Optional[list[Qualitie]]

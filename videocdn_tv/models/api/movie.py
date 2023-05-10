@@ -7,7 +7,7 @@ from videocdn_tv.models.contents import Media
 
 class Movie(BaseApi):
     default_media_id: Optional[str] = None
-    released: datetime
+    released: Optional[datetime] = None
     media: list[Media]
     year: str
     content_type: str

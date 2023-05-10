@@ -6,9 +6,9 @@ from videocdn_tv.models.contents import Episode
 
 
 class TvSeries(BaseApi):
-    season_count: int
-    episode_count: int
-    last_episode_id: Optional[int] = None
-    start_date: datetime
-    end_date: Optional[datetime] = None
+    season_count: Optional[int]
+    episode_count: Optional[int]
+    last_episode_id: Optional[int]
+    start_date: Optional[datetime]
+    end_date: Optional[datetime]
     episodes: list[Episode]

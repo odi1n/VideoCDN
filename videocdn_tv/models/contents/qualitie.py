@@ -1,8 +1,10 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
 class Qualitie(BaseModel):
-    id: int
+    id: Optional[int]
     url: str
     resolution: int
     media_id: int

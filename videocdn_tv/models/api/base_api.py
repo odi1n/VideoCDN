@@ -14,8 +14,8 @@ class BaseApi(BaseModel):
     kinopoisk_id: Optional[int] = None
     created: datetime
     updated: Optional[datetime] = None
-    blocked: int
-    preview_iframe_src: str
+    blocked: Optional[bool]
+    preview_iframe_src: Optional[str]
     iframe_src: str
-    iframe: str
+    iframe: Optional[str]
     translations: Optional[list[Translation]] = None

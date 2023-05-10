@@ -6,11 +6,11 @@ from videocdn_tv.models.contents import Media
 
 
 class Anime(BaseApi):
-    en_title: Optional[str] = None
-    other_title: Optional[str] = None
-    default_media_id: Optional[str] = None
-    worldart_id: Optional[str] = None
-    released: datetime
+    en_title: Optional[str]
+    other_title: Optional[str]
+    default_media_id: Optional[str]
+    worldart_id: Optional[str]
+    released: Optional[datetime]
     media: list[Media]
     year: str
     content_type: str
