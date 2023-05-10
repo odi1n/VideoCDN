@@ -1,4 +1,3 @@
-from videocdn_tv import ParamsContent, ParamsEpisode, ParamsSeason
 from videocdn_tv.link import (
     ANIME_TV_SERIES,
     ANIME_TV_SERIES_EPISODES,
@@ -26,6 +25,7 @@ from videocdn_tv.models.content import (
     TvSeriesSeasonsContent,
 )
 from videocdn_tv.models.translation import TranslationModel
+from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
 from videocdn_tv.request import get_request
 
 

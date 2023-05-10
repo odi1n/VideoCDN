@@ -4,13 +4,12 @@ from typing import Any, Optional, Union
 
 import requests
 
-from videocdn_tv import VideoCDN
 from videocdn_tv.exception import ApiFailedError, ApiTokenInvalidError
 from videocdn_tv.params import ParamsContent, ParamsEpisode, ParamsSeason
 
 
 def get_request(
-    self: VideoCDN,
+    self,
     link: str,
     params: Optional[Union[ParamsContent, ParamsSeason, ParamsEpisode]] = None,
 ) -> Any:
